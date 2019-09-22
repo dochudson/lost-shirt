@@ -635,15 +635,15 @@ ul > li {
   color: #1b1b1b;
 }
 .single-product__size {
-  display: flex;
   margin-top: 28px;
   margin-bottom: 28px;
   padding-left: 28px;
 }
 .single-product__size-item {
-  margin-right: 7px;
+  display: inline-block;
   width: 47px;
   height: 47px;
+  margin-right: 2px;
   font-size: 15px;
   font-weight: bold;
   color: #212121;
@@ -651,14 +651,20 @@ ul > li {
   text-align: center;
   line-height: 47px;
   border: 2px solid #e0d9c8;
+  cursor: pointer;
 }
-.single-product__size-item:last-child {
-  margin-right: 0;
+.single-product__size-item label {
+  cursor: pointer;
+}
+.single-product__input-hide {
+  position: absolute;
+  opacity: 0;
 }
 .single-product__size-item--not-availible {
   color: #cac3b3;
 }
-.single-product__size-item--active, .single-product__size-item:hover {
+.single-product__size-item--active,
+.single-product__size-item:not(.single-product__size-item--not-availible):hover {
   border-color: #ffc92f;
   background-color: #ffc92f;
 }
@@ -675,39 +681,59 @@ ul > li {
   border: 2px solid transparent;
   border-radius: 50%;
   box-sizing: border-box;
+  cursor: pointer;
 }
-.single-product__color-item--black {
+.single-product__color-item::before {
+  content: "";
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  margin-right: 20px;
+  border: 2px solid transparent;
+  border-radius: 50%; 
+}
+.single-product__color-item--black::before {
+  content: "";
+  display: block;
   background-color: #2f2c25;
 }
-.single-product__color-item--white {
+.single-product__color-item--white::before {
+  content: "";
   border-color: #e0d9c8;
   background-color: #fcf5e6;
 }
-.single-product__color-item--green {
+.single-product__color-item--green::before {
+  content: "";
   background-color: #529029;
 }
-.single-product__color-item--blue {
+.single-product__color-item--blue::before {
+  content: "";
   background-color: #39498d;
 }
-.single-product__color-item--red {
+.single-product__color-item--red::before {
   background-color: #d82727;
 }
-.single-product__color-item--active::after {
+.single-product__color-item--active::after, .single-product__color-item:focus::after {
   content: "";
   position: absolute;
   top: 50%;
   left: 50%;
   margin-top: -18px;
   margin-left: -18px;
-  width: 30px;
-  height: 30px;
+  width: 32px;
+  height: 32px;
   border: 3px solid #ffc92f;
   border-radius: 50%;
+}
+.single-product__color-item:focus{
+  outline: none;
 }
 .btn--byu {
   margin-left: 28px;
   margin-bottom: 28px;
   padding: 10px 68px;
+  border: none;
+  cursor: pointer;
 }
 .single-product-tab {
   position: relative;

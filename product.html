@@ -59,42 +59,60 @@
 					<li class="single-product__feature-item">Страна производства: Россия</li>
 					<li class="single-product__feature-item">Артикул: MA002EWDOEZ6</li>
 				</ul>
-				<ul class="single-product__size">
-					<li class="single-product__size-item single-product__size-item--not-availible">xxs</li>
-					<li class="single-product__size-item single-product__size-item--not-availible">xs</li>
-					<li class="single-product__size-item">s</li>
-					<li class="single-product__size-item">m</li>
-					<li class="single-product__size-item single-product__size-item--active">l</li>
-					<li class="single-product__size-item">xl</li>
-					<li class="single-product__size-item">2xl</li>
-					<li class="single-product__size-item single-product__size-item--not-availible">3xl</li>
-				</ul>
-				<ul class="single-product__color">
-					<li class="single-product__color-item single-product__color-item--black"><span class="visually-hidden">черный</span></li>
-					<li class="single-product__color-item single-product__color-item--white"><span class="visually-hidden">белый</span></li>
-					<li class="single-product__color-item single-product__color-item--green single-product__color-item--active"><span class="visually-hidden">зеленый</span></li>
-					<li class="single-product__color-item single-product__color-item--blue"><span class="visually-hidden">синий</span></li>
-					<li class="single-product__color-item single-product__color-item--red"><span class="visually-hidden">красный</span></li>
-				</ul>
-				<a href="#" class="btn btn--byu">купить</a>
+				<form action="#">
+					<div class="single-product__size">
+						<div class="single-product__size-item single-product__size-item--not-availible">
+							<label><input type="radio" name="size" value="xxs" class="single-product__input-hide" disabled>xxs</label>
+						</div>
+						<div class="single-product__size-item single-product__size-item--not-availible">
+							<label><input type="radio" name="size" value="xs"class="single-product__input-hide" disabled>xs</label>
+						</div>
+						<div class="single-product__size-item">
+							<label><input type="radio" name="size" value="s"class="single-product__input-hide">s</label>
+						</div>
+						<div class="single-product__size-item">
+							<label><input type="radio" name="size" value="m"class="single-product__input-hide">m</label>
+						</div>
+						<div class="single-product__size-item single-product__size-item--active">
+							<label><input type="radio" name="size" value="l"class="single-product__input-hide">l</label>
+						</div>
+						<div class="single-product__size-item">
+							<label><input type="radio" name="size" value="xl"class="single-product__input-hide">xl</label>
+						</div>
+						<div class="single-product__size-item">
+							<label><input type="radio" name="size" value="2xl"class="single-product__input-hide">2xl</label>
+						</div>
+						<div class="single-product__size-item single-product__size-item--not-availible">
+							<label><input type="radio" name="size" value="3xl"class="single-product__input-hide" disabled>3xl</label>
+						</div>
+					</div>
+					<div class="single-product__color">
+						<input type="radio" data-shirt="./images/tshirts/tshirt_07.png" class="single-product__color-item single-product__color-item--black single-product__color-item--active">
+						<input type="radio" data-shirt="./images/tshirts/tshirt_08.png" class="single-product__color-item single-product__color-item--white">
+						<input type="radio" data-shirt="./images/tshirts/tshirt_09.png" class="single-product__color-item single-product__color-item--green">
+						<input type="radio" data-shirt="./images/tshirts/tshirt_10.png" class="single-product__color-item single-product__color-item--blue">
+						<input type="radio" data-shirt="./images/tshirts/tshirt_11.png" class="single-product__color-item single-product__color-item--red">
+					</div>
+					<button class="btn btn--byu">купить</button>
+				</form>
 			</section>
 		</section>
 		<ul class="filter">
 	    <li class="filter__item filter__item--active">
-	      <a href="#" class="filter__link">Орисание</a>
+	      <a href="#" data-tab="descr" class="filter__link">Орисание</a>
 	    </li>
 	    <li class="filter__item">
-	      <a href="#" class="filter__link">Таблица размеров</a>
+	      <a href="#" data-tab="size" class="filter__link">Таблица размеров</a>
 	    </li>
 	    <li class="filter__item">
-	      <a href="#" class="filter__link">условия доставки</a>
+	      <a href="#" data-tab="deliv" class="filter__link">условия доставки</a>
 	    </li>
 	    <li class="filter__item">
-	      <a href="#" class="filter__link">О бренде</a>
+	      <a href="#" data-tab="brand" class="filter__link">О бренде</a>
 	    </li>          
 	  </ul>
 	  <div class="single-product-tab">
-	  	<div class="single-product-tab__descr">
+	  	<div class="single-product-tab__descr descr single-product-tab__descr--visually">
 			  <section class="product-descr">
 			  	<h2 class="visually-hidden">Описание</h2>
 			  	<ul class="product-descr__property">
@@ -154,7 +172,7 @@
 			  	</div>
 			  </section>
 		  </div>
-		  <div class="single-product-tab__descr">
+		  <div class="single-product-tab__descr size">
 			  <section class="table-size">
 			  	<h2 class="visually-hidden">Таблица размеров</h2>
 			  	<div class="table-size__how-size">
@@ -276,7 +294,7 @@
 			  	</table>
 			  </section>
 		  </div>
-		  <div class="single-product-tab__descr">
+		  <div class="single-product-tab__descr deliv">
 			  <section class="delivery">
 			  	<h2 class="visually-hidden">Условия доставки</h2>
 			  	<div class="delivery__logo">
@@ -297,7 +315,7 @@
 			  	</div>
 			  </section>
 		  </div>
-		  <div class="single-product-tab__descr single-product-tab__descr--visually">
+		  <div class="single-product-tab__descr brand">
 			  <section class="about-brand">
 			  	<h2 class="visually-hidden">О бренде Hurley</h2>
 			  	<div class="about-brand__logo">
@@ -440,5 +458,10 @@
       </section>
 		</div>
 	</footer>
+	
+	<script src="./scripts/filter-shirt.js"></script>
+	<script src="scripts/choice-size.js"></script>
+	<script src="./scripts/tabs.js"></script>
+
 </body>
 </html>
