@@ -61,37 +61,45 @@
 				</ul>
 				<form action="#">
 					<div class="single-product__size">
-						<div class="single-product__size-item single-product__size-item--not-availible">
-							<label><input type="radio" name="size" value="xxs" class="single-product__input-hide" disabled>xxs</label>
-						</div>
-						<div class="single-product__size-item single-product__size-item--not-availible">
-							<label><input type="radio" name="size" value="xs"class="single-product__input-hide" disabled>xs</label>
+						<div class="single-product__size-item">
+							<input type="radio" name="size" value="xxs" id="size-xxs" class="single-product__input-hide" disabled>
+							<label for="size-xxs" class="single-product__size-label">xxs</label>
 						</div>
 						<div class="single-product__size-item">
-							<label><input type="radio" name="size" value="s"class="single-product__input-hide">s</label>
+							<input type="radio" name="size" value="xs" id="size-xs" class="single-product__input-hide" disabled>
+							<label for="size-xs" class="single-product__size-label">xs</label>
 						</div>
 						<div class="single-product__size-item">
-							<label><input type="radio" name="size" value="m"class="single-product__input-hide">m</label>
-						</div>
-						<div class="single-product__size-item single-product__size-item--active">
-							<label><input type="radio" name="size" value="l"class="single-product__input-hide">l</label>
+							<input type="radio" name="size" value="s" id="size-s" class="single-product__input-hide">
+							<label for="size-s" class="single-product__size-label">s</label>
 						</div>
 						<div class="single-product__size-item">
-							<label><input type="radio" name="size" value="xl"class="single-product__input-hide">xl</label>
+							<input type="radio" name="size" value="m" id="size-m" class="single-product__input-hide">
+							<label for="size-m" class="single-product__size-label">m</label>
 						</div>
 						<div class="single-product__size-item">
-							<label><input type="radio" name="size" value="2xl"class="single-product__input-hide">2xl</label>
+							<input type="radio" name="size" value="l" id="size-l" class="single-product__input-hide" checked>
+							<label for="size-l" class="single-product__size-label">l</label>
 						</div>
-						<div class="single-product__size-item single-product__size-item--not-availible">
-							<label><input type="radio" name="size" value="3xl"class="single-product__input-hide" disabled>3xl</label>
+						<div class="single-product__size-item">
+							<input type="radio" name="size" value="xl" id="size-xl" class="single-product__input-hide">
+							<label for="size-xl" class="single-product__size-label">xl</label>
+						</div>
+						<div class="single-product__size-item">
+							<input type="radio" name="size" value="2xl" id="size-2xl" class="single-product__input-hide">
+							<label for="size-2xl" class="single-product__size-label">2xl</label>
+						</div>
+						<div class="single-product__size-item">
+							<input type="radio" name="size" value="3xl" id="size-3xl" class="single-product__input-hide" disabled>
+							<label for="size-3xl" class="single-product__size-label">3xl</label>
 						</div>
 					</div>
 					<div class="single-product__color">
-						<input type="radio" data-shirt="./images/tshirts/tshirt_07.png" class="single-product__color-item single-product__color-item--black single-product__color-item--active">
-						<input type="radio" data-shirt="./images/tshirts/tshirt_08.png" class="single-product__color-item single-product__color-item--white">
-						<input type="radio" data-shirt="./images/tshirts/tshirt_09.png" class="single-product__color-item single-product__color-item--green">
-						<input type="radio" data-shirt="./images/tshirts/tshirt_10.png" class="single-product__color-item single-product__color-item--blue">
-						<input type="radio" data-shirt="./images/tshirts/tshirt_11.png" class="single-product__color-item single-product__color-item--red">
+						<input type="radio" data-shirt="./images/tshirts/tshirt_07.png" class="single-product__color-item single-product__color-item--black" name="color-shirt" checked>
+						<input type="radio" data-shirt="./images/tshirts/tshirt_08.png" class="single-product__color-item single-product__color-item--white" name="color-shirt">
+						<input type="radio" data-shirt="./images/tshirts/tshirt_09.png" class="single-product__color-item single-product__color-item--green" name="color-shirt">
+						<input type="radio" data-shirt="./images/tshirts/tshirt_10.png" class="single-product__color-item single-product__color-item--blue" name="color-shirt">
+						<input type="radio" data-shirt="./images/tshirts/tshirt_11.png" class="single-product__color-item single-product__color-item--red" name="color-shirt">
 					</div>
 					<button class="btn btn--byu">купить</button>
 				</form>
@@ -460,7 +468,7 @@
 	</footer>
 	
 	<script src="./scripts/filter-shirt.js"></script>
-	<script src="scripts/choice-size.js"></script>
+	<!--<script src="scripts/choice-size.js"></script>-->
 	<script src="./scripts/tabs.js"></script>
 
 </body>

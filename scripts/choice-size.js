@@ -1,4 +1,4 @@
-(function() {
+/*(function() {
 	const controlls = document.querySelectorAll('.single-product__size-item');
 	const activeClass = 'single-product__size-item--active';
 
@@ -14,4 +14,4 @@
 		}
 	})
 
-})();
+})();*/

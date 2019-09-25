@@ -6,23 +6,23 @@
 	console.log(tabLinks);
 
 	tabLinks.forEach(function(control) {
-	control.addEventListener("click", function(e) {
-    e.preventDefault();
+    control.addEventListener("click", function(e) {
+      e.preventDefault();
 
-    const filterName = control.getAttribute("data-tab");
+      const filterName = control.getAttribute("data-tab");
 
-    tabLinks.forEach(function(link) {
-      link.closest(".filter__item").classList.remove(activeClassLink);
-    })  
+      tabLinks.forEach(function(link) {
+        link.closest(".filter__item").classList.remove(activeClassLink);
+      })  
 
-    tabContent.forEach(function(tab) {
-      tab.closest(".single-product-tab__descr").classList.remove(activeClass);
-      if (tab.classList.contains(`${filterName}`)) {
-      	tab.closest(".single-product-tab__descr").classList.add(activeClass);
-      }
+      tabContent.forEach(function(tab) {
+        tab.closest(".single-product-tab__descr").classList.remove(activeClass);
+        if (tab.classList.contains(`${filterName}`)) {
+          tab.closest(".single-product-tab__descr").classList.add(activeClass);
+        }
+      })
+
+      control.closest(".filter__item").classList.add(activeClassLink);
     })
-
-    control.closest(".filter__item").classList.add(activeClassLink);
   })
-	})
 }());
